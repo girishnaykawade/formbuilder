@@ -1,0 +1,57 @@
+.main {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  .input-section {
+    font-size: 14px;
+    float: left;
+    padding: 20px 0;
+    text-align: left;
+    .input-dropdown {
+      height: 35px;
+      background: transparent;
+      font-size: 15px;
+      text-transform: capitalize;
+    }
+  }
+  .input-container {
+    width: 100%;
+    float: left;
+    padding: 20px 0;
+    .list {
+      width: 100%;
+      float: left;
+      .list-item {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding: 0 10px;
+        border: 1px solid gainsboro;
+        border-radius: 5px;
+        margin: 5px 0;
+        .field-comp {
+          width: 70%;
+          float: left;
+        }
+        .action {
+          width: auto;
+          float: left;
+          padding: 10px;
+          background: transparent;
+          border-radius: 5px;
+          border: 1px solid gainsboro;
+          cursor: pointer;
+          margin: 5px;
+        }
+      }
+    }
+    .download-json {
+      width: auto;
+      padding: 10px;
+      background: transparent;
+      border-radius: 5px;
+      border: 1px solid gainsboro;
+      cursor: pointer;
+    }
+  }
+}

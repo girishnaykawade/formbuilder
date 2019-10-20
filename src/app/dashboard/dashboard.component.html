@@ -1,0 +1,23 @@
+
+<div class="main">
+  <h3>Form Builder</h3>
+  <div class="input-section">
+    <select class="input-dropdown" (change)="setSelectedFields($event.target.value)">
+        <option selected disabled [value]="">Select Input Type</option>
+        <option *ngFor="let input of inputTypesArray; let in = index" value="{{in}}">{{input.type}}</option>
+    </select>
+  </div>
+
+  <div class="input-container">
+    <div class="list">
+        <div class="list-item" *ngFor="let selectedInput of selectedInputFieldsArray; let i = index">
+          <app-input class="field-comp" ([ngModel])="selectedInput" [field]="selectedInput"></app-input>
+          <button class="action" (click)="moveSelectedField('up', i)"> Move Up </button>
+          <button class="action" (click)="moveSelectedField('down', i)"> Move Down </button>
+          <button class="action" (click)="removeSelectedField(i)"> Remove </button>
+        </div>
+    </div>
+
+    <button class="download-json" *ngIf="selectedInputFieldsArray.length" (click)="downloadJSON()">Download</button>
+  </div>
+</div>
