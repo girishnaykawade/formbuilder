@@ -1,35 +1,35 @@
 <div class="fields">
-  <div class="input-field" *ngIf="field?.type == 'static'">
-    <label> {{field?.type}} </label>
-    <input [(ngModel)]="field.value" [placeholder]="field?.placeholder">
-  </div>
+    <div class="input-field" *ngIf="field?.type == 'static'">
+        <label> {{field?.type}} </label>
+        <input [(ngModel)]="field.value" [placeholder]="field?.placeholder">
+    </div>
 
-  <div class="input-field" *ngIf="field?.type == 'input'">
-    <label> {{field?.type}} </label>
-    <input type="text" [(ngModel)]="field.value" [placeholder]="field?.placeholder">
-    <label>Allowed characters </label>
-    <input type="text" [(ngModel)]="field.maxLength" [placeholder]="field?.maxLengthPlaceholder">
-  </div>
+    <div class="input-field" *ngIf="field?.type == 'input'">
+        <label> {{field?.type}} </label>
+        <input type="text" [(ngModel)]="field.value" [placeholder]="field?.placeholder">
+        <label>Allowed characters </label>
+        <input type="text" [(ngModel)]="field.maxLength" [placeholder]="field?.maxLengthPlaceholder">
+    </div>
 
-  <div class="input-field" *ngIf="field?.type == 'radio'">
-    <label> {{field?.type}} </label>
-    <input type="text" [(ngModel)]="field.value" [placeholder]="field?.placeholder">
-    <ul>
-      <li *ngFor="let choice of field?.choice ">
-        <input type="text" [(ngModel)]="choice" name="choice">
-      </li>
-    </ul>
-  </div>
+    <div class="input-field" *ngIf="field?.type == 'radio'">
+        <label> {{field?.type}} </label>
+        <input type="text" [(ngModel)]="field.value" [placeholder]="field?.placeholder">
+        <ul>
+            <li *ngFor="let choice of field?.choice ">
+                <input type="text" [(ngModel)]="choice" name="choice">
+            </li>
+        </ul>
+    </div>
 
-  <div class="input-field" *ngIf="field?.type == 'select'">
-    <label> {{field?.type}} </label>
+    <div class="input-field" *ngIf="field?.type == 'select'">
+        <label> {{field?.type}} </label>
 
-    <input type="text" [(ngModel)]="field.value" [placeholder]="field?.placeholder">
-    <ul>
-      <li *ngFor="let option of field?.options ">
-        <input type="text" [(ngModel)]="option">
-      </li>
-    </ul>
-  </div>
+        <input type="text" [(ngModel)]="field.value" [placeholder]="field?.placeholder">
+        <ul>
+            <li *ngFor="let option of field?.options ">
+                <input type="text" [(ngModel)]="option">
+            </li>
+        </ul>
+    </div>
 
 </div>
