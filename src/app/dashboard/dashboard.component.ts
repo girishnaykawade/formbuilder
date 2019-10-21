@@ -20,9 +20,7 @@ export class DashboardComponent {
      * @param index
      */
     setSelectedFields(index) {
-        if (index) {
-            this.selectedInputFieldsArray.push(this.inputTypesArray[index]);
-        }
+        this.selectedInputFieldsArray.push(this.inputTypesArray[index]);
     }
 
     /**
@@ -30,9 +28,7 @@ export class DashboardComponent {
      * @param index
      */
     removeSelectedField(index) {
-        if (index) {
-            this.selectedInputFieldsArray.splice(index, 1);
-        }
+        this.selectedInputFieldsArray.splice(index, 1);
     }
 
     /**
