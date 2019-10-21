@@ -1,0 +1,37 @@
+<div class="form-fields-container">
+<div class="upload-file-container">
+  <div class="upload-btn">
+    <input type="file" class="hide-file-input" #fileUpload (change)="fileChangeListener($event)"/>
+    <span class="upload-file" aria-hidden="true" (click)="triggers()" title="Upload JSON">Upload JSON</span>
+  </div>
+</div>
+
+<div class="fields uploaded-fields" *ngIf="uploadedJSON.length">
+  <div *ngFor="let formItem of uploadedJSON">
+    <div>
+      <div class="input-field" *ngIf="formItem?.type == 'static'">
+        <label> {{formItem.value}} </label>
+      </div>
+
+      <div class="input-field" *ngIf="formItem?.type == 'input'">
+        <input type="text" [value]="formItem?.value" [placeholder]="formItem?.placeholder">
+      </div>
+
+      <div class="input-field radio-container" *ngIf="formItem?.type == 'radio'">
+        <label> {{formItem.value}} </label>
+        <label *ngFor="let choice of formItem?.choice">
+          <input type="radio" name="choice"> {{choice}}
+        </label>
+      </div>
+
+      <div class="input-field select-box" *ngIf="formItem?.type == 'select'">
+        <label> {{formItem.value}} </label>
+        <select>
+          <option disabled selected value="">{{formItem.value}}</option>
+          <option *ngFor="let option of formItem?.options" value="option">{{option}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

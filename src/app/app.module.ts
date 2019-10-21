@@ -8,12 +8,14 @@ import { InputComponent } from './input/input.component';
 import {FieldsService} from './service/fields.service';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
+import { FormFieldsComponent } from './form-fields/form-fields.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    InputComponent
+    InputComponent,
+    FormFieldsComponent
   ],
   imports: [
     BrowserModule,

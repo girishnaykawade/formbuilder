@@ -15,8 +15,8 @@
         <label> {{field?.type}} </label>
         <input type="text" [(ngModel)]="field.value" [placeholder]="field?.placeholder">
         <ul>
-            <li *ngFor="let choice of field?.choice ">
-                <input type="text" [(ngModel)]="choice" name="choice">
+            <li *ngFor="let choice of field?.choice; let i = index; trackBy:trackByFn">
+                <input type="text" [(ngModel)]="field?.choice[i]" name="choice">
             </li>
         </ul>
     </div>
@@ -26,8 +26,8 @@
 
         <input type="text" [(ngModel)]="field.value" [placeholder]="field?.placeholder">
         <ul>
-            <li *ngFor="let option of field?.options ">
-                <input type="text" [(ngModel)]="option">
+            <li *ngFor="let option of field?.options; let i = index; trackBy:trackByFn">
+                <input type="text" [(ngModel)]="field?.options[i]">
             </li>
         </ul>
     </div>

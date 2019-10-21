@@ -30,6 +30,7 @@ export class FieldsService {
             {
                 type: 'select',
                 placeholder: 'Enter Text',
+                value: '',
                 options: ['option1', 'option2'],
             }
         ];
